@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <!-- Row 1: Age and Gender -->
+        <div class="form-row">
+            <div class="form-group" style="flex: 1;">
+                <label for="age">Age:</label>
+                <input type="number" id="age" min="2" max="120" placeholder="Enter your age">
+            </div>
+            <div class="form-group" style="flex: 1;">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Height -->
+        <div class="form-group">
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter height in cm">
+        </div>
+
+        <!-- Row 3: Weight -->
+        <div class="form-group">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter weight in kg">
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button onclick="calculateBMI()">Calculate</button>
+            <button onclick="clearFields()">Clear</button>
+        </div>
+
+        <!-- Result -->
+        <div class="result" id="result"></div>
+
+
+
+        <div id="quote" class="quote-style"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
